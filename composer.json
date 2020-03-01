@@ -1,0 +1,11 @@
+{
+    "name": "root/buddy-carry-backup",
+    "description": "Backup system for wordpress",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Bcb\\" : ["src/"]
+        }
+    }
+}
