@@ -4,12 +4,15 @@ namespace Bcb;
 
 use \Bcb\Classes\PharDataArchivator;
 use \Bcb\Classes\Zip;
+use Bcb\Traits\FileSystemTrait;
 
 class Backup
 {
     function run()
     {
-        $this->makeArchive();
+        $data = [];
+        $data['backups'] = \Bcb\Traits\FileSystemTrait::filesList(BACKUPS_DIR);
+        \Bcb\Traits\ViewTrait::load('backup', $data);
     }
 
     function makeArchive()

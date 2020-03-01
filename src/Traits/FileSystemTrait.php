@@ -16,6 +16,11 @@ trait FileSystemTrait
         return false;
     }
 
+    public static function filesList($directory)
+    {
+        return array_diff(scandir($directory), array('..', '.'));
+    }
+
     public static function generateFileNameFromTimestamp($extension)
     {
         return date('m-d-Y-h-i-sa', time()) . '.' . $extension;

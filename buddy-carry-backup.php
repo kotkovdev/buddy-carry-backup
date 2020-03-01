@@ -17,6 +17,6 @@ require ('globals.php');
 
 function backupView() {
     $SettingsPath = __DIR__ . '/backup.php';
-    add_menu_page( 'Backup', 'Backup', 'administrator', $SettingsPath, '', plugins_url( '/' . __DIR__ . '/buddy-carry-backup.png' ) );
+    add_menu_page( 'Backup', 'Backup', 'administrator', $SettingsPath, '',  plugins_url( 'buddy-carry-backup//buddy-carry-backup.png' ) );
 }
 add_action( 'admin_menu', 'backupView'); // Register Menus.
